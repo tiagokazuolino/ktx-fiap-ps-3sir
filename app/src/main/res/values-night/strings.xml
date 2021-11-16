@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnTxtMenuHome">Home</string>
+    <string name="btnTextSkip">Pular Introdução</string>
+    <string name="btnTextNext">Proximo</string>
+    <string name="tvWelcome">Bem vindo ao Terra Planeta Agua</string>
+    <string name="tvDescriptionSignIn">Visualize em tempo real os sensores espalhados pela Ong</string>
+    <string name="btnSignIn">Acessar</string>
+    <string name="btnSignUp">Registrar</string>
+    <string name="tvSignIn">SignIn</string>
+    <string name="tfEmail">E-Mail</string>
+    <string name="tfPassword">Senha</string>
+    <string name="btnSignInEnter">Entrar</string>
+    <string name="btnSignUpRegister">Registrar</string>
+    <string name="tvSignUpText">SignUp</string>
+    <string name="tvMinLabel">Min.</string>
+    <string name="tvMaxLabel">Max.</string>
+    <string name="tvDataLabel">Capturado em</string>
+    <string name="btnOxygen">Oxigenio</string>
+    <string name="btnPHMeter">Medidor PH</string>
+    <string name="btnDepth">Profundidade</string>
+    <string name="btnThermometer">Temperatura</string>
+    <string name="btnExit">Sair</string>
+    <string name="btnMaintence">Status</string>
+    <string name="btnProfile">Perfil</string>
+    <string name="etUid">Uid</string>
+    <string name="etName">Nome</string>
+    <string name="etBattery">Bateria</string>
+    <string name="etEmail">E-mail</string>
+    <string name="etPhoneNumber">Telefone</string>
+    <string name="etProviderId">Provider Id</string>
+    <string name="etTenantId">Tenant Id</string>
+    <string name="btnUpdate">Atualizar</string>
+</resources>

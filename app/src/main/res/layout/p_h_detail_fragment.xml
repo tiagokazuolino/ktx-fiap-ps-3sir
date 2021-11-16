@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ph.detail.PHDetailFragment">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bcPHDetatilChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.github.mikephil.charting.charts.BarChart>
+
+        <LinearLayout
+            android:id="@+id/llPHDetilsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_200"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/bcPHDetatilChart">
+
+            <TextView
+                android:id="@+id/tvPHDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvPHDetailsUuid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPHDetailsBattery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvPHDetailsStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMaxLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/tvMaxLabel"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvDataLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tvDataLabel"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvMinLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/tvMinLabel"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flPHDetailsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/black_400"
+            app:layout_constraintBottom_toTopOf="@+id/llPHDetilsActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPHDetilsDescription">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPHDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llPHDetilsActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flPHDetailsList"
+
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPHDetilsHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:text="@string/btnTxtMenuHome"
+                android:textSize="12sp"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_home"
+                app:iconGravity="top"
+                app:iconSize="15dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPHDetilsBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:text="@string/btnPHMeter"
+                android:textSize="12sp"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_ph_meter_white"
+                app:iconGravity="top"
+                app:iconSize="15dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.ph.detail.PHDetailViewModel" />
+    </data>
+</layout>
+

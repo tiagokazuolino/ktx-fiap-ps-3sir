@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:forceDarkAllowed="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/temperaturaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.temperatura.TemperaturaFragment">
+
+
+        <LinearLayout
+            android:id="@+id/rwTemperaturaTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_200"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTemperaturaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Temperatura Sensor"
+
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/clTemperaturaTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTemperaturaHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_200"
+                    android:text="Home"
+                    android:textSize="12sp"
+                    app:cornerRadius="0dp"
+                    app:icon="@drawable/ic_home"
+                    app:iconGravity="top"
+                    app:iconSize="24dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTemperaturaCreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_200"
+                    android:text="Mock"
+                    android:textSize="12sp"
+                    app:cornerRadius="0dp"
+                    app:icon="@drawable/ic_oxygen_white"
+                    app:iconGravity="top"
+                    app:iconSize="24dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTemperaturaExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_200"
+                    android:text="Sair"
+                    android:textSize="12sp"
+                    app:cornerRadius="0dp"
+                    app:icon="@drawable/ic_exit_to_app_white"
+                    app:iconGravity="top"
+                    app:iconSize="24dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rwTemperaturaDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rwTemperaturaTitle">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTemperaturaSensorList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.oxigenio.OxigenioViewModel" />
+    </data>
+</layout>

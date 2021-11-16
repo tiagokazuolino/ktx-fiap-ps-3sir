@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.welcome.WelcomeFragment"
+        android:label="welcome_fragment"
+        tools:layout="@layout/welcome_fragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.signin.SignInFragment"
+        android:label="sign_in_fragment"
+        tools:layout="@layout/sign_in_fragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.signup.SignUpFragment"
+        android:label="sign_up_fragment"
+        tools:layout="@layout/sign_up_fragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_oxigenioFragment"
+            app:destination="@id/oxigenioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_PHFragment"
+            app:destination="@id/PHFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profundidadeFragment"
+            app:destination="@id/profundidadeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_temperaturaFragment"
+            app:destination="@id/temperaturaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_manutencaoSensorFragment"
+            app:destination="@id/manutencaoSensorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oxigenioFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.oxigenio.OxigenioFragment"
+        android:label="oxigenio_fragment"
+        tools:layout="@layout/oxigenio_fragment" >
+        <action
+            android:id="@+id/action_oxigenioFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_oxigenioFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_oxigenioFragment_to_oxigenioDetailFragment"
+            app:destination="@id/oxigenioDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PHFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.ph.PHFragment"
+        android:label="p_h_fragment"
+        tools:layout="@layout/p_h_fragment" >
+        <action
+            android:id="@+id/action_PHFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_PHFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_PHFragment_to_PHDetailFragment"
+            app:destination="@id/PHDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profundidadeFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.profundidade.ProfundidadeFragment"
+        android:label="profundidade_fragment"
+        tools:layout="@layout/profundidade_fragment" >
+        <action
+            android:id="@+id/action_profundidadeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profundidadeFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_profundidadeFragment_to_profundidadeDetailFragment"
+            app:destination="@id/profundidadeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/temperaturaFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.temperatura.TemperaturaFragment"
+        android:label="temperatura_fragment"
+        tools:layout="@layout/temperatura_fragment" >
+        <action
+            android:id="@+id/action_temperaturaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_temperaturaFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_temperaturaFragment_to_temperaturaDetailFragment"
+            app:destination="@id/temperaturaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="user"
+            app:argType="br.fiap.rm82371.hardware.ong.terraplanetaagua.data.models.UserModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/manutencaoSensorFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.manutencao.ManutencaoSensorFragment"
+        android:label="manutencao_sensor_fragment"
+        tools:layout="@layout/manutencao_sensor_fragment" >
+        <action
+            android:id="@+id/action_manutencaoSensorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="manutencao"
+            app:argType="br.fiap.rm82371.hardware.ong.terraplanetaagua.data.utils.Senores"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/oxigenioDetailFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.oxigenio.detail.OxigenioDetailFragment"
+        android:label="oxigenio_detail_fragment"
+        tools:layout="@layout/oxigenio_detail_fragment" >
+        <argument
+            android:name="oxigenio"
+            app:argType="br.fiap.rm82371.hardware.ong.terraplanetaagua.data.models.OxigenioSensorModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_oxigenioDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PHDetailFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.ph.detail.PHDetailFragment"
+        android:label="p_h_detail_fragment"
+        tools:layout="@layout/p_h_detail_fragment" >
+        <action
+            android:id="@+id/action_PHDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="ph"
+            app:argType="br.fiap.rm82371.hardware.ong.terraplanetaagua.data.models.PhSensorModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/profundidadeDetailFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.profundidade.detail.ProfundidadeDetailFragment"
+        android:label="profundidade_detail_fragment"
+        tools:layout="@layout/profundidade_detail_fragment" >
+        <action
+            android:id="@+id/action_profundidadeDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="profundidade"
+            app:argType="br.fiap.rm82371.hardware.ong.terraplanetaagua.data.models.ProfundidadeSensorModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/temperaturaDetailFragment"
+        android:name="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.temperatura.detail.TemperaturaDetailFragment"
+        android:label="temperatura_detail_fragment"
+        tools:layout="@layout/temperatura_detail_fragment" >
+        <action
+            android:id="@+id/action_temperaturaDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="temperatura"
+            app:argType="br.fiap.rm82371.hardware.ong.terraplanetaagua.data.models.TemperaturaSensorModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

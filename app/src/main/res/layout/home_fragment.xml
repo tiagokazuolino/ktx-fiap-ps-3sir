@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.home.HomeFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHomeExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:text="@string/btnExit"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_exit_to_app_white"
+                app:iconGravity="top"
+                app:iconSize="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:text="@string/btnProfile"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_person"
+                app:iconGravity="top"
+                app:iconSize="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMaintence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:text="@string/btnMaintence"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_biotech_white"
+                app:iconGravity="top"
+                app:iconSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHomeOxigenio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:elevation="0dp"
+                android:paddingVertical="15dp"
+                android:text="@string/btnOxygen"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_oxygen_white"
+                app:iconGravity="top"
+                app:iconSize="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHomePH"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:paddingVertical="15dp"
+                android:text="@string/btnPHMeter"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_ph_meter"
+                app:iconGravity="top"
+                app:iconSize="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHomeProfundidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:paddingVertical="15dp"
+                android:text="@string/btnDepth"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_depth_white"
+                app:iconGravity="top"
+                app:iconSize="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHomeTemperatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/blue_200"
+                android:paddingVertical="15dp"
+                android:text="@string/btnThermometer"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_thermometer"
+                app:iconGravity="top"
+                app:iconSize="24dp" />
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/mvMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="br.fiap.rm82371.hardware.ong.terraplanetaagua.ui.home.HomeViewModel" />
+    </data>
+</layout>

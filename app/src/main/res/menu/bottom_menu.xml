@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="@string/btnTxtMenuHome"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/btnTxtMenuPerfil"
+        android:icon="@drawable/ic_person"
+        />
+    <item
+        android:id="@+id/manutencaoSensorFragment"
+        android:title="@string/btnTxtMenuSettings"
+        android:icon="@drawable/ic_settings"
+        />
+</menu>
