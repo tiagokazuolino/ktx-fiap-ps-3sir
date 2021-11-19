@@ -1,4 +1,5 @@
 # Terra Planeta Agua Ong(Projeto Academico)
+![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ## Firebase Auth, Firebase Realtime Database, Coroutines, Fragments, Navigation, viewmodel, kodein-DI, MPAndroidChart and XML Screen
 ### Setup Inicial
 1. Criar conta google [x]
